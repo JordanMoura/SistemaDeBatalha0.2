@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 
-class Batalha {
+ class Batalha{
 
   void iniciarBatalha(Heroi player1, Heroi player2, Heroi player3, Heroi player4, Vilao vilao1){
     Scanner read = new Scanner(System.in);
@@ -17,7 +17,7 @@ class Batalha {
     
     
     
-    
+  
     
     ///////// Tela principal batalha /////////
       System.out.println("-----Batalha Iniciada-----\n\n");
@@ -127,9 +127,7 @@ class Batalha {
 
 
 
-
-
-
+      if(playerAtual.vidaHeroi > 0){ // Se o heroi tiver vida
            System.out.println(playerAtual.nomeHeroi+" esta atuando!");
            System.out.println("Oque deseja fazer?");
            System.out.println("1-Atacar");
@@ -173,6 +171,11 @@ class Batalha {
 
             System.out.println(playerAtual.nomeHeroi+" Ataca "+vilao1.nomeVilao+" e causa "+danoAtual+" de dano");
           }
+      }else{ // Se o heroi não tiver vida
+
+        System.out.println("O heroi "+playerAtual.nomeHeroi+" esta morto! \n\n Dado sera Jogado novamente: \n");
+        
+      }
 
 
 
@@ -213,7 +216,7 @@ class Batalha {
     if(vilao1.vidaVilao <= 0){
       System.out.println(vilao1.nomeVilao+ " Morreu");	
     }else{
-      System.out.println("GAME OVER");
+      System.out.println("----------GAME OVER------------");
     }
 
     
